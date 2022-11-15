@@ -2,6 +2,9 @@ package KI31.Haladzun.Lab4;
 
 import java.util.Scanner;
 
+/**
+ * Описує предметну область розумного патрона
+ */
 public class CleverCartridge extends Cartridge implements Aim{
     Scanner sc = new Scanner(System.in);
 
@@ -15,6 +18,10 @@ public class CleverCartridge extends Cartridge implements Aim{
         distance = 0;
     }
 
+    /**
+     * Робить вистріл
+     * @return
+     */
     @Override
     public String shoot() {
         String result;
@@ -41,24 +48,36 @@ public class CleverCartridge extends Cartridge implements Aim{
         return result;
     }
 
+    /**
+     * Перезаправляє патрон
+     */
     @Override
     public void reloadCartridge() {
         super.reloadCartridge();
         battery = true;
     }
 
+    /**
+     * Автоприцілення
+     */
     @Override
     public void canAutoAim() {
         System.out.println("");
         successfulShot = true;
     }
 
+    /**
+     * Прицілення вручну
+     */
     @Override
     public void canNotAutoAim() {
         System.out.println("");
         successfulShot = Math.random() < 0.5;
     }
 
+    /**
+     * Перевіряє чи користувач попав у ціль
+     */
     @Override
     public void isShotSuccessful() {
         if (successfulShot)

@@ -18,21 +18,7 @@ public abstract class Cartridge {
      * Робить вистріл
      * @return
      */
-    public abstract String shoot();/*{
-        String result;
-
-        if (capCanBeUsed == 0) {
-            result = "Капсуль неможливо використати знову.";
-        }else if (!bulletIsLoaded || !powderIsLoaded){
-            result = "Ви не можете вистрелити. Патрон пустий.";
-        } else {
-            result = "Бах!!!";
-            powderIsLoaded = false;
-            bulletIsLoaded = false;
-            capCanBeUsed--;
-        }
-        return result;
-    }*/
+    public abstract String shoot();
 
     /**
      * Заправляє патрон порохом та вставляє кулю

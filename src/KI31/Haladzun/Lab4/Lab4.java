@@ -1,7 +1,5 @@
 package KI31.Haladzun.Lab4;
 
-import KI31.Haladzun.Lab3.Cartridge;
-
 import java.util.Scanner;
 
 public class Lab4 {
